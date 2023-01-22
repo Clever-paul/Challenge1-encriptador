@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #F3F5FC;
+    max-width: 1920px;
+  }
+
+.header {
+  position: absolute;
+  top: 0.8rem;
+  left: 2rem;
+}
+.header img{
+  width: 2rem;
+}
+
+.main {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: center;
+}
+.entrada-texto{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.6rem 3rem;
+}
+.entrada-texto textarea{
+  width: 80%;
+  color: #0A3871;
+  justify-content: center;
+  border: none;
+  font-size: 2rem;
+  text-transform: lowercase; /*transformamos en texto en minusculas*/
+  resize: none;
+}
+::placeholder{color: #0A3871;}
+textarea:focus{
+  outline: none;
+}
+.entrada-texto .btns{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns button{
+  width: 13.6rem;
+  height: 3rem;
+  border-radius: 10px ;
+  border: none ;
+}
+ .btns button:first-child{
+  background-color: #0A3871;
+  color: #fff;
+}
+.btns button:last-child{
+  background-color: #D8DFE8;
+  color: #0A3871;
+}
+
+.salida-texto{
+  width: 30%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2.25rem 3rem;
+}
+.mensaje{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.3rem;
+}
+.mensaje textarea{
+  width: 100%;
+  border: none;
+  color: #0A3871;
+  background-color: #fff;
+  resize: none;
+  margin-top: 10px;
+}
+
+.mensaje .copiar{
+  background-color: #D8DFE8;
+  color: #0A3871;
+  width: 13.6rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: none ;
+}
+.info{
+  background-color: #fff;
+  margin: auto;
+  display: none;
+}
+
+.info img{
+  width: 18rem;
+  background-color: #fff;
+}
+.info h4{
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 2rem 0px 0.3rem 0px;
+}
+.info p{
+  text-align: center;
+  background-color: #fff;
+}
