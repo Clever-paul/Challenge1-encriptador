@@ -18,11 +18,22 @@ function encriptar(){
                        .replace(/e/g, "enter")
                        .replace(/i/g, "imes")
                        .replace(/o/g, "ober")
-                       .replace(/u/g, "ufat")
-                       .replace(/ /g, "");
+                       .replace(/u/g, "ufat");
 
     mensajeEncriptado.value = nuevoMensaje;                 
+}
+function desencriptar(){
+    let mensaje = document.getElementById("texto").value;
+    let mensaDesencriptado = document.getElementById("textoencriptado");
+    let nuevoMensaje = mensaje.replace(/ai/g, "a")
+                            .replace(/enter/g, "e")
+                            .replace(/imes/g, "i")
+                            .replace(/ober/g, "o")
+                            .replace(/ufat/g, "u");
+    mensaDesencriptado.value = nuevoMensaje;
 }
 
 let btnEncriptar = document.getElementById("encriptar");
 btnEncriptar.addEventListener("click", encriptar);
+let btnDesencriptar = document.getElementById("desencriptar");
+btnDesencriptar.addEventListener("click", desencriptar);
