@@ -67,6 +67,17 @@ textarea:focus{
   background-color: #D8DFE8;
   color: #0A3871;
 }
+/*implementando el warning */
+.warning{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin: 10px 10px;
+}
+.warning .icono{
+  padding: 0px 10px;
+}
 
 .salida-texto{
   width: 30%;
@@ -76,6 +87,11 @@ textarea:focus{
   background-color: #fff;
   border-radius: 10px;
   padding: 2.25rem 3rem;
+}
+#cont-mensaje{
+  /*display: none;*/
+  width: 100%;
+  height: 100%;
 }
 .mensaje{
   display: flex;
@@ -105,9 +121,9 @@ textarea:focus{
   border: none ;
 }
 .info{
+  display: none;
   background-color: #fff;
   margin: auto;
-  display: none;
 }
 
 .info img{
@@ -127,7 +143,7 @@ textarea:focus{
 
 .footer{
   width: 100%;
-  height: 7rem;
+  height: 5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
