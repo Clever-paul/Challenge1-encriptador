@@ -2,12 +2,9 @@
 function mostrarInfo(){
     let x = document.getElementById('cont-mensaje');
     let y = document.getElementById('info');
-    if (x.style.display === 'none'){
+    if(y.style.display !== 'none' ){
         x.style.display = 'block';
-        y.style.display = 'none';
-    }else{
-        x.style.display = 'none';
-        y.style.display = 'block';
+        y.style.display = 'none'
     }
 }
 
@@ -36,9 +33,7 @@ function desencriptar(){
 
 function copiar(){
     let mensajeCopiar =  document.getElementById("textoencriptado");
-    navigator.clipboard.writeText(mensajeCopiar.value)
-      .then(() => console.log('Texto copiado!'))
-      .catch((error) => console.error('Error al copiar el texto', error));
+    navigator.clipboard.writeText(mensajeCopiar.value);   
 }
 
 let btnEncriptar = document.getElementById("encriptar");
@@ -46,6 +41,6 @@ btnEncriptar.addEventListener("click", encriptar);
 btnEncriptar.addEventListener("click", mostrarInfo)
 let btnDesencriptar = document.getElementById("desencriptar");
 btnDesencriptar.addEventListener("click", desencriptar);
-
+btnDesencriptar.addEventListener("click", mostrarInfo);
 let btnCopiar = document.getElementById("copiar");
 btnCopiar.addEventListener("click", copiar);

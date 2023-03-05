@@ -12,6 +12,7 @@
   position: absolute;
   top: 0.8rem;
   left: 2rem;
+  border: solid red 2px;
 }
 .header img{
   width: 2rem;
@@ -78,7 +79,7 @@ textarea:focus{
 .warning .icono{
   padding: 0px 10px;
 }
-
+/*salida de texto*/
 .salida-texto{
   width: 30%;
   height: 90%;
@@ -178,4 +179,40 @@ textarea:focus{
 .footer-info .redes:hover i{
   transform: scale(1.1);
 
+}
+@media (max-width: 540px){
+  *{
+    font-size: 14px;
+  }
+  .main{
+    width: 100%;
+    height: auto;
+    border: solid 2px red;
+  }
+  .entrada-texto{
+    width: 100%;
+  }
+  .entrada-texto .btns{
+    flex-direction: column;
+  }
+  .entrada-texto .btns button{
+    width: 100%;
+    margin: 5px 0px;
+    border: #000;
+  }
+  .salida-texto{
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+  #cont-mensaje{
+    display: block;
+  }
+  .info{
+    display: none;
+  }
+  .mensaje .copiar{
+    width: 100%;
+  }
+ 
 }
