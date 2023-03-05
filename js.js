@@ -14,11 +14,12 @@ function mostrarInfo(){
 function encriptar(){
     let mensaje = document.getElementById("texto").value;
     let mensajeEncriptado = document.getElementById("textoencriptado");
-    var nuevoMensaje = mensaje.replace(/a/g, "ai")
+    let nuevoMensaje = mensaje
                        .replace(/e/g, "enter")
                        .replace(/i/g, "imes")
                        .replace(/o/g, "ober")
-                       .replace(/u/g, "ufat");
+                       .replace(/u/g, "ufat")
+                       .replace(/a/g, "ai");
 
     mensajeEncriptado.value = nuevoMensaje;                 
 }
@@ -33,7 +34,18 @@ function desencriptar(){
     mensaDesencriptado.value = nuevoMensaje;
 }
 
+function copiar(){
+    let mensajeCopiar =  document.getElementById("textoencriptado");
+    navigator.clipboard.writeText(mensajeCopiar.value)
+      .then(() => console.log('Texto copiado!'))
+      .catch((error) => console.error('Error al copiar el texto', error));
+}
+
 let btnEncriptar = document.getElementById("encriptar");
 btnEncriptar.addEventListener("click", encriptar);
+btnEncriptar.addEventListener("click", mostrarInfo)
 let btnDesencriptar = document.getElementById("desencriptar");
 btnDesencriptar.addEventListener("click", desencriptar);
+
+let btnCopiar = document.getElementById("copiar");
+btnCopiar.addEventListener("click", copiar);
